@@ -1,0 +1,178 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#	new file:   WebRoot/LICENSE
+#	new file:   WebRoot/WEB-INF/classes/com/fe/action/CoreAction.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/base/BaseAction.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/base/BaseDAO.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/base/BaseInterceptorAdapter.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/base/BaseRequestBean.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/base/BaseResponseBean.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/base/BaseService.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/UserInfo.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_EventMessage_Request.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_ImageMessage_Request.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_LinkMessage_Request.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_LocalMessage_Request.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_MusicMessage_Response.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_NewsMessage_Response$Item.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_NewsMessage_Response.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_TextMessage_Request.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_TextMessage_Response.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/bean/xml/UserInfo.xml
+#	new file:   WebRoot/WEB-INF/classes/com/fe/constant/Constants.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/dao/ICoreDao.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/dao/IUserDAO.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/dao/impl/CoreDAOImpl.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/dao/impl/IUserDAO.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/dao/impl/UserDAOImpl.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/service/ICoreService.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/service/impl/CoreServiceImpl.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/CommonErrorCode.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/CommonUtil.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/Config.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/JsonUtil.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/ParseXmlConfig.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/StringUtil.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/TimeUtil.class
+#	new file:   WebRoot/WEB-INF/classes/com/fe/util/WeixinErrorCode.class
+#	new file:   WebRoot/WEB-INF/config/DataBaseConfig.xml
+#	new file:   WebRoot/WEB-INF/config/spring.xml
+#	new file:   WebRoot/WEB-INF/lib/antlr-2.7.6.jar
+#	new file:   WebRoot/WEB-INF/lib/cglib-nodep-2.1_2.jar
+#	new file:   WebRoot/WEB-INF/lib/com.springsource.com.ibatis-2.3.4.726.jar
+#	new file:   WebRoot/WEB-INF/lib/com.springsource.org.apache.commons.logging-1.1.1.jar
+#	new file:   WebRoot/WEB-INF/lib/commons-beanutils-1.6.jar
+#	new file:   WebRoot/WEB-INF/lib/commons-collections.jar
+#	new file:   WebRoot/WEB-INF/lib/commons-fileupload-1.2.2.jar
+#	new file:   WebRoot/WEB-INF/lib/commons-io-2.1.jar
+#	new file:   WebRoot/WEB-INF/lib/commons-lang.jar
+#	new file:   WebRoot/WEB-INF/lib/dom4j-1.6.jar
+#	new file:   WebRoot/WEB-INF/lib/ezmorph-1.0.4.jar
+#	new file:   WebRoot/WEB-INF/lib/jdom.jar
+#	new file:   WebRoot/WEB-INF/lib/json-lib-2.2-jdk15.jar
+#	new file:   WebRoot/WEB-INF/lib/jta.jar
+#	new file:   WebRoot/WEB-INF/lib/mysql-connector-java-5.0.8-bin.jar
+#	new file:   WebRoot/WEB-INF/lib/ojdbc14.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.asm-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.aspects-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.beans-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.context-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.context.support-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.core-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.expression-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.jdbc-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.orm-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.transaction-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.web-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/org.springframework.web.servlet-3.0.1.RELEASE-A.jar
+#	new file:   WebRoot/WEB-INF/lib/stringtree-json-2.0.9.jar
+#	new file:   WebRoot/WEB-INF/web.xml
+#	new file:   WebRoot/css/images/Thumbs.db
+#	new file:   WebRoot/css/images/ajax-loader.png
+#	new file:   WebRoot/css/images/icons-18-black.png
+#	new file:   WebRoot/css/images/icons-18-white.png
+#	new file:   WebRoot/css/images/icons-36-black.png
+#	new file:   WebRoot/css/images/icons-36-white.png
+#	new file:   WebRoot/css/jquery.mobile-1.3.0.min.css
+#	new file:   WebRoot/css/jquery.mobile.structure-1.3.0.min.css
+#	new file:   WebRoot/css/jquery.mobile.theme-1.3.0.min.css
+#	new file:   WebRoot/css/style.css
+#	new file:   WebRoot/img/320x100changzhou.jpg
+#	new file:   WebRoot/img/320x100nanjing.jpg
+#	new file:   WebRoot/img/320x100xuzhou.jpg
+#	new file:   WebRoot/index.html
+#	new file:   WebRoot/js/app/test.js
+#	new file:   WebRoot/js/lib/backbone-min.js
+#	new file:   WebRoot/js/lib/common.js
+#	new file:   WebRoot/js/lib/config.js
+#	new file:   WebRoot/js/lib/jquery.js
+#	new file:   WebRoot/js/lib/jquery.mobile-1.3.0.min.js
+#	new file:   WebRoot/js/lib/underscore-min.js
+#	new file:   WebRoot/scss/style.scss
+#	new file:   WebRoot/test1.html
+#	new file:   src/com/fe/action/CoreAction.java
+#	new file:   src/com/fe/base/BaseAction.java
+#	new file:   src/com/fe/base/BaseDAO.java
+#	new file:   src/com/fe/base/BaseInterceptorAdapter.java
+#	new file:   src/com/fe/base/BaseRequestBean.java
+#	new file:   src/com/fe/base/BaseResponseBean.java
+#	new file:   src/com/fe/base/BaseService.java
+#	new file:   src/com/fe/bean/UserInfo.java
+#	new file:   src/com/fe/bean/weixin/WX_EventMessage_Request.java
+#	new file:   src/com/fe/bean/weixin/WX_ImageMessage_Request.java
+#	new file:   src/com/fe/bean/weixin/WX_LinkMessage_Request.java
+#	new file:   src/com/fe/bean/weixin/WX_LocalMessage_Request.java
+#	new file:   src/com/fe/bean/weixin/WX_MusicMessage_Response.java
+#	new file:   src/com/fe/bean/weixin/WX_NewsMessage_Response.java
+#	new file:   src/com/fe/bean/weixin/WX_TextMessage_Request.java
+#	new file:   src/com/fe/bean/weixin/WX_TextMessage_Response.java
+#	new file:   src/com/fe/bean/xml/UserInfo.xml
+#	new file:   src/com/fe/constant/Constants.java
+#	new file:   src/com/fe/dao/ICoreDao.java
+#	new file:   src/com/fe/dao/IUserDAO.java
+#	new file:   src/com/fe/dao/impl/CoreDAOImpl.java
+#	new file:   src/com/fe/dao/impl/IUserDAO.java
+#	new file:   src/com/fe/dao/impl/UserDAOImpl.java
+#	new file:   src/com/fe/service/ICoreService.java
+#	new file:   src/com/fe/service/impl/CoreServiceImpl.java
+#	new file:   src/com/fe/util/CommonErrorCode.java
+#	new file:   src/com/fe/util/CommonUtil.java
+#	new file:   src/com/fe/util/Config.java
+#	new file:   src/com/fe/util/JsonUtil.java
+#	new file:   src/com/fe/util/ParseXmlConfig.java
+#	new file:   src/com/fe/util/StringUtil.java
+#	new file:   src/com/fe/util/TimeUtil.java
+#	new file:   src/com/fe/util/WeixinErrorCode.java
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/action/CoreAction.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/base/BaseAction.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/base/BaseDAO.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/base/BaseInterceptorAdapter.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/base/BaseRequestBean.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/base/BaseResponseBean.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/base/BaseService.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/UserInfo.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_EventMessage_Request.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_ImageMessage_Request.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_LinkMessage_Request.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_LocalMessage_Request.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_MusicMessage_Response.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_NewsMessage_Response$Item.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_NewsMessage_Response.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_TextMessage_Request.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/weixin/WX_TextMessage_Response.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/bean/xml/UserInfo.xml
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/constant/Constants.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/dao/ICoreDao.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/dao/IUserDAO.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/dao/impl/CoreDAOImpl.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/dao/impl/IUserDAO.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/dao/impl/UserDAOImpl.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/service/ICoreService.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/service/impl/CoreServiceImpl.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/CommonErrorCode.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/CommonUtil.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/Config.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/JsonUtil.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/ParseXmlConfig.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/StringUtil.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/TimeUtil.class
+#	deleted:    WebRoot/WEB-INF/classes/com/fe/util/WeixinErrorCode.class
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#	WebRoot/img/Thumbs.db
+

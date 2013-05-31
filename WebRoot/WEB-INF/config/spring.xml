@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+	http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+  
+   <!-- 自动扫描Bean  -->
+
+   <context:component-scan base-package="com.fe"/>   
+   
+  
+   <!-- <bean id="defaultUrlMapping" class="org.springframework.web.servlet.handler.BeanNameUrlHandlerMapping">
+      <property name="interceptors" ref="localeChangeInterceptor" />
+      <property name="order">                       
+       <value>1</value>              
+   </property>     
+   </bean>
+    <bean id="localeChangeInterceptor" class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor" /> 
+      
+       <bean id="sqlMapClientTemplate" class="org.springframework.orm.ibatis.SqlMapClientTemplate">  
+       <property name="sqlMapClient" ref="sqlMapClient"></property> 
+       <property name="dataSource" ref="dataSource"/>
+     </bean>
+ 
+    -->
+
+    <!-- DataSource数据源 -->
+   <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+<!--		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>-->
+<!--		<property name="url" value="jdbc:mysql://127.0.0.1:3306/lxj"></property>-->
+<!--		<property name="username" value="root"></property>-->
+<!--		<property name="password" value="fet123"></property>-->
+		
+		<property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"></property>
+        <!--<property name="url" value="jdbc:oracle:thin:@10.32.65.42:1521:oradb"></property>-->
+		<property name="url" value="jdbc:oracle:thin:@192.168.4.201:1521:cring"></property>
+		<!--<property name="url" value="jdbc:oracle:thin:@127.0.0.1:1521:XE"></property>-->
+		<property name="username" value="mobile"></property>
+		<property name="password" value="mobile"></property>
+		
+		<!--
+		<property name="username" value="fet"></property>
+		<property name="password" value="fet120205"></property>
+	      -->
+   </bean>
+   
+   <!-- Spring iBatis SqlMapClient -->
+   <bean id="sqlMapClient" class="org.springframework.orm.ibatis.SqlMapClientFactoryBean">
+       <property name="configLocation" value="WEB-INF/config/DataBaseConfig.xml"/>
+       <property name="dataSource" ref="dataSource"/>
+    </bean>
+  
+    <!--事务管理DataSourceTransactionManager-->   
+    <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+       <property name="dataSource" ref="dataSource"/>
+    </bean> 
+    
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping">
+        <property name="interceptors">
+            <list>
+                <ref bean="baseInterceptorAdapter"/>
+            </list>
+        </property>
+    </bean>
+    
+    
+    <!--启动spring注解功能   
+    <tx:annotation-driven transaction-manager="transactionManager" />--> 
+    
+    <!-- 限制上传文件大小 -->
+	 <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">     
+	   <property name="maxUploadSize">     
+	       <value>2048000</value>     
+	   </property>     
+	   <property name="maxInMemorySize">     
+	       <value>2048</value>     
+	   </property>     
+	   <property name="defaultEncoding">     
+	       <value>UTF-8</value>     
+	   </property>     
+	 </bean>
+
+  
+</beans>
