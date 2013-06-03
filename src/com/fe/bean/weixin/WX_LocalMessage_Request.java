@@ -45,12 +45,6 @@ public class WX_LocalMessage_Request  extends BaseRequestBean {
 		Label	 地理位置信息
 		MsgId	 消息id，64位整型
       */
-	
-//	    public String ToUserName;
-//		
-//		public String FromUserName;
-//		
-//		public Integer CreateTime;
 		
 		public String MsgType = "location";
 		

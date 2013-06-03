@@ -109,16 +109,20 @@ public class ParseXmlConfig implements java.io.Serializable
 		{
 			if (null != xml && !"".equals(xml))
 			{
-				ByteArrayInputStream ins = new ByteArrayInputStream(xml.getBytes());
+				ByteArrayInputStream ins = new ByteArrayInputStream(xml.getBytes("utf-8"));
+			
 				SAXBuilder sax = new SAXBuilder();
+				
 				Document doc = sax.build(ins);
+				
 				root = doc.getRootElement();
+				
 			}
 			return root;
 		}
 		catch (Exception e)
 		{
-			//logger.error(e.getMessage());
+			e.printStackTrace();
 		}
 		return root;
 	}

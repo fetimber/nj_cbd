@@ -32,12 +32,6 @@ public class WX_LinkMessage_Request  extends BaseRequestBean {
 	MsgId	 消息id，64位整型 
 	 
 	 */
-	
-//	    public String ToUserName;
-//		
-//		public String FromUserName;
-//		
-//		public Integer CreateTime;
 		
 		public String MsgType = "link";
 		

@@ -16,6 +16,7 @@ import com.fe.bean.UserInfo;
 import com.fe.constant.Constants;
 import com.fe.service.ICoreService;
 import com.fe.service.impl.CoreServiceImpl;
+import com.fe.util.CommonUtil;
 import com.fe.util.Config;
 import com.fe.util.StringUtil;
 
@@ -71,12 +72,12 @@ public class CoreAction extends BaseAction
 		try
 		{
 			//转换编码格式
-			request.setCharacterEncoding("GBK");
+			request.setCharacterEncoding("utf-8");
 			//获取xml字符串
 			rs = dealRequestXML(request.getReader());
 			//获取xml解析为Element
 	        root  = returnXmlRoot(rs);
-			//获取MsgType
+	        //获取MsgType
 	        msgType = returnMsgType(root);
 	        //根据MsgType转换为wx_request对象 (xmlToObject)
 			Object inObject = xmlToObject(root,msgType);
@@ -89,6 +90,7 @@ public class CoreAction extends BaseAction
 		catch (Exception e) 
 		{
 			e.printStackTrace();
+			
 		}
 		
         request.setAttribute(Constants.RETRUN_OBJECT_STRING, rs);
@@ -100,7 +102,7 @@ public class CoreAction extends BaseAction
 			HttpServletResponse response, HttpSession session)
 	{
 		UserInfo user = new UserInfo();
-		//user.setId(5);
+		
 //		user.setUserName("test1");
 //		user.setUserPassWord("test2");
 //		userDAO.addUser(user);
@@ -135,15 +137,19 @@ public class CoreAction extends BaseAction
 
 	public static void main(String[] args) throws Exception
 	{
-		String requestXml =  "<xml>" +
-				"<ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName>" +
-				"<FromUserName><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName>" +
-				"<CreateTime>1368968791</CreateTime>" +
-				"<MsgType><![CDATA[text]]></MsgType>" +
-				"<Content><![CDATA[测试内容]]></Content>" +
-				"<MsgId>5879676186589659142</MsgId></xml>";
-		
+//		String requestXml =  "<xml>" +
+//				"<ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName>" +
+//				"<FromUserName><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName>" +
+//				"<CreateTime>1368968791</CreateTime>" +             
+//				"<MsgType><![CDATA[text]]></MsgType>" +
+//				"<Content><![CDATA[测试内容]]></Content>" +
+//				"<MsgId>5879676186589659142</MsgId></xml>";
+//		
 		//String requestXml = "<xml><ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName><FromUserName><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName><CreateTime>1369922829</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[????????????è??]]></Content><MsgId>5883773748598800410</MsgId></xml>";
+		
+		String requestXml = "<xml><ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName><FromUserName><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName><CreateTime>1370053290</CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[啊八年]]></Content><MsgId>5884334074327203896</MsgId></xml>";
+		
+		System.out.println(System.currentTimeMillis());
 		
 		CoreAction action = new CoreAction();
 		
@@ -155,6 +161,7 @@ public class CoreAction extends BaseAction
 		root  = action.returnXmlRoot(rs);
 		//获取MsgType
 		msgType = action.returnMsgType(root);
+
 		//根据MsgType转换为wx_request对象 (xmlToObject)
 		Object inObject = action.xmlToObject(root,msgType);
 		
@@ -166,7 +173,7 @@ public class CoreAction extends BaseAction
 		rs = action.objectToXml(root,outObject);
 		
 		//1  获取xml解析为Element
-        //2  获取MsgType据此转换为wx_request对象 (xml To InObject)
+        //2 获取MsgType据此转换为wx_request对象 (xml To InObject)
 		//3  业务逻辑处理（未开发） 处理输入对象 并组装为响应对象   (InObject To OutObject)
 		//4  根据返回的wx_resopnse对象，组装成为XML返回给微信平台 (OutObject To xml)
 	}

@@ -20,18 +20,17 @@ public class WX_TextMessage_Request extends BaseRequestBean
 	   </xml>
 	   
 	   
-	   用户请求：<xml><ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName><FromUserName
-><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName><CreateTime>1369922819</
-CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[112233]]></Conte
-nt><MsgId>5883773705649127448</MsgId></xml>
-用户请求：<xml><ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName><FromUserName
-><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName><CreateTime>1369922829</
-CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[????????????è??]
-]></Content><MsgId>5883773748598800410</MsgId></xml>
-	   
+	   用户请求：
+	   <xml>
+	   <ToUserName><![CDATA[gh_215fa9bb277c]]></ToUserName>
+	   <FromUserName><![CDATA[oDhJ2jpAw7PdNX2P2n1unMC7Ay3k]]></FromUserName>
+	   <CreateTime>1369922819</CreateTime>
+	   <MsgType><![CDATA[text]]></MsgType>
+	   <Content><![CDATA[112233]]></Content>
+	   <MsgId>5883773705649127448</MsgId>
+	   </xml>
+
 	*/
-	
-	
 	
 	/* 参数	描述
        ToUserName	开发者微信号
@@ -41,12 +40,7 @@ CreateTime><MsgType><![CDATA[text]]></MsgType><Content><![CDATA[????????????è??
        Content	 文本消息内容
        MsgId	 消息id，64位整型
 	 */
-//	
-//  public String ToUserName;
-//	
-//	public String FromUserName;
-//	
-//	public Integer CreateTime;
+
 	
 	public String MsgType = "text";
 	

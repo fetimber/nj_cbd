@@ -5,6 +5,8 @@ import java.lang.reflect.Field;
 import java.util.Arrays;
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.apache.commons.lang.ArrayUtils;
 import org.jdom.Element;
 
@@ -67,6 +69,7 @@ public class BaseAction {
 	{
 		StringBuffer sb  = null;
 		String line = "";
+		//String rs = "";
 		
 		try 
 		{ 
@@ -75,15 +78,18 @@ public class BaseAction {
 			{ 
 				sb.append(line);
 			}	
-			System.out.println("用户请求：" + sb.toString());
+			
 		}
 		
 		catch(Exception ex)
 		{
 			ex.printStackTrace();
 		}
+		System.out.println("用户请求：" + sb.toString());
 		
-		return StringUtil.get8859ByGBK(sb.toString());
+		//rs = sb.toString();
+
+		return sb.toString();
 	}
 	
 	/**
@@ -106,6 +112,16 @@ public class BaseAction {
 		return config.getChildText(root, Constants.MSGTYPE);	
 	}
 	
+	
+	/**
+	 * 获取消息类型
+	 * @param root
+	 * @return
+	 */
+	public String returnElementText (Element root,String elementName)
+	{
+		return config.getChildText(root, elementName);	
+	}
 	
 	/**
 	 * XML字符串转化为实体REQUEST对象

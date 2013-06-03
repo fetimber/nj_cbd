@@ -30,12 +30,6 @@ public class WX_EventMessage_Request  extends BaseRequestBean
 	
   */
 	
-//	public String ToUserName;
-//		
-//	public String FromUserName;
-//	
-//	public Integer CreateTime;
-	
 	public String MsgType = "event";
 	
 	public String Event;

@@ -2,6 +2,7 @@ package com.fe.util;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Locale;
 
 import org.apache.commons.lang.time.DateFormatUtils;
 
@@ -145,4 +146,13 @@ public class TimeUtil {
 		}
 		return "";
 	}
+	
+	   public static void main(String[] args) 
+	   {     
+	        SimpleDateFormat sdf = new SimpleDateFormat("", Locale.SIMPLIFIED_CHINESE);
+	        sdf.applyPattern("yyyy年MM月dd日 HH时mm分ss秒");
+	        long  test1 = 1368968791;
+	        System.out.println(sdf.format(System.currentTimeMillis()));
+	        
+	    }
 }

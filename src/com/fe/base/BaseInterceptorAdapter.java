@@ -35,27 +35,14 @@ public class BaseInterceptorAdapter extends HandlerInterceptorAdapter {
 			{
 				obj = request.getAttribute(Constants.RETRUN_OBJECT_STRING);
 				response.setCharacterEncoding("UTF-8");
-				try 
-				{
-					PrintWriter writer  = response.getWriter();
-					
-					 if (writer != null) 
-					 {
-			             writer.print(obj.toString());
-			             writer.flush();
-			         }
-				} 
-				catch (IOException e)
-				{
-					e.printStackTrace();
-				}
+				xmlResponse(request,response,obj);
 			}
 			
 		}
 	}
 	
 	/**
-	 *  //将结果对象转化为JSON串
+	 * 将结果对象转化为JSON串
 	 * @param request
 	 * @param response
 	 * @param obj
@@ -76,4 +63,42 @@ public class BaseInterceptorAdapter extends HandlerInterceptorAdapter {
 		
 	}
 
+	/**
+	 * 将结果对象转化为串
+	 * @param request
+	 * @param response
+	 * @param obj
+	 */
+	private void xmlResponse(HttpServletRequest request,
+			HttpServletResponse response,Object obj)
+	{	   
+		if (obj != null) 
+		{		
+			PrintWriter writer = null;
+			try 
+			{
+				writer = response.getWriter();
+
+				 if (writer != null) 
+				 {
+		             writer.print(obj.toString());
+		             writer.flush();
+		         }
+				 System.out.println("STRING VALUE:\n" + obj.toString() + "\n"); 	
+			} 
+			catch (IOException e)
+			{
+				e.printStackTrace();
+			}
+			finally
+			{	
+				if(null != writer)
+				{
+					writer.close();
+				}
+			}
+					
+		}
+		
+	}
 }
