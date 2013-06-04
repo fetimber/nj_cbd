@@ -1,6 +1,6 @@
 package com.fe.dao;
 
-import com.fe.bean.UserInfo;
+import com.fe.bean.xml.UserInfo;
 
 public interface IUserDAO {
 	/** * 通过ID查询 * @param id * @return */
