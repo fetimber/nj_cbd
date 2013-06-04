@@ -12,13 +12,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.fe.base.BaseAction;
-import com.fe.bean.UserInfo;
+import com.fe.bean.xml.UserInfo;
 import com.fe.constant.Constants;
 import com.fe.service.ICoreService;
 import com.fe.service.impl.CoreServiceImpl;
-import com.fe.util.CommonUtil;
 import com.fe.util.Config;
-import com.fe.util.StringUtil;
 
 @Controller
 @Scope("singleton")

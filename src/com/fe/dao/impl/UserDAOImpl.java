@@ -6,7 +6,7 @@ import java.util.List;
 import org.springframework.stereotype.Component;
 
 import com.fe.base.BaseDAO;
-import com.fe.bean.UserInfo;
+import com.fe.bean.xml.UserInfo;
 import com.fe.dao.IUserDAO;
 
 @Component("userDao")

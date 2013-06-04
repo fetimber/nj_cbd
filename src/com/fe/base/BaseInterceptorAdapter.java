@@ -19,6 +19,9 @@ import com.fe.util.JsonUtil;
 @Scope("singleton")
 public class BaseInterceptorAdapter extends HandlerInterceptorAdapter {
 
+	
+	
+
 	public void afterCompletion(HttpServletRequest request,
 			HttpServletResponse response, Object handler, Exception ex) {
  
