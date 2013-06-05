@@ -45,6 +45,7 @@ public class EncryptDecryptData {
         // 3.1 >>> 调用解密方法
         byte[] b = hexStr2ByteArr(a);
         System.out.println(decrypt(KEY, b));
+        
     }
 
     public static String createRandomString(int randomNum) {
