@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE sqlMap
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="ClientInfo">
+  <!-- Use type aliases to avoid typing the full classname every time. -->
+  <typeAlias alias="ClientInfo" type="com.fe.bean.xml.ClientInfo"/>
+  <!-- Result maps describe the mapping between the columns returned
+       from a query, and the class properties.  A result map isn't
+       necessary if the columns (or aliases) match to the properties
+       exactly. -->
+       
+  <resultMap id="ClientInfoResult" class="ClientInfo">
+    <result property="ip" column="IP"/>
+    <result property="token" column="TOKEN"/>
+    <result property="weiXinId" column="WEIXINID"/>
+    <result property="weiXinName" column="WEIXINNAME"/>
+    <result property="createTime" column="CREATETIME"/>
+    <result property="endTime" column="ENDTIME"/>
+    <result property="clientStatus" column="CLIENTSTATUS"/>
+    <result property="companyName" column="COMPANYNAME"/>
+    <result property="areaDesc" column="AREADESC"/>
+    <result property="clientAdmin" column="CLIENTADMIN"/>
+    <result property="clientPassWord" column="CLIENTPASSWORD"/>
+    <result property="contactNumber" column="CONTACTNUMBER"/>
+    <result property="remark" column="REMARK"/>
+  </resultMap>
+  
+  <!-- Select with no parameters using the result map for Account class. -->
+  <select id="selectAllClients" resultMap="ClientInfoResult">
+    select 
+      ip,
+      token,
+      weiXinId,
+      weiXinName,
+      createTime,
+      endTime,
+      clientStatus,
+      companyName,
+      areaDesc,
+      clientAdmin,
+      clientPassWord,
+      contactNumber,
+      remark
+     from CLIENTINFO
+  </select>
+  <!-- A simpler select example without the result map.  Note the
+       aliases to match the properties of the target result class. -->
+  <select id="selectClientnfoByWeiXinId" parameterClass="ClientInfo" resultClass="ClientInfo">
+    select
+      ip,
+      token,
+      weiXinId,
+      weiXinName,
+      createTime,
+      endTime,
+      clientStatus,
+      companyName,
+      areaDesc,
+      clientAdmin,
+      clientPassWord,
+      contactNumber,
+      remark
+    from CLIENTINFO
+    where WEIXINID = #weiXinId# 
+    and CLIENTSTATUS = #clientStatus#
+  </select>
+  
+  
+  <!-- Insert example, using the parameter class -->
+
+  <!-- Update example, using the parameter class -->
+
+  <!-- Delete example, using an integer as the parameter class -->
+ 
+</sqlMap>
+
+
