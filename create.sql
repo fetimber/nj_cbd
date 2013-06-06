@@ -1,4 +1,4 @@
-create table FRAME_CLIENTINFO
+create table CLIENTINFO
 (
   IP             VARCHAR2(20),
   TOKEN          VARCHAR2(50),
