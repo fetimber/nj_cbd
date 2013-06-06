@@ -14,6 +14,8 @@
   <!-- List the SQL Map XML files. They can be loaded from the
        classpath, as they are here (com.domain.data...) -->
   <sqlMap resource="com/fe/bean/xml/UserInfo.xml"/>
+  <sqlMap resource="com/fe/bean/xml/ClientInfo.xml"/>
+  
   <!-- <sqlMap resource="main/com/fe/bean/SystemParameter.xml"/>-->
   <!--  <sqlMap resource="main/com/fe/bean/Product.xml"/>-->
   <!-- <sqlMap resource="main/com/fe/bean/Material.xml"/>-->

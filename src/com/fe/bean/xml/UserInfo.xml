@@ -6,7 +6,7 @@
 
 <sqlMap namespace="UserInfo">
   <!-- Use type aliases to avoid typing the full classname every time. -->
-  <typeAlias alias="UserInfo" type="com.fe.bean.UserInfo"/>
+  <typeAlias alias="UserInfo" type="com.fe.bean.xml.UserInfo"/>
   <!-- Result maps describe the mapping between the columns returned
        from a query, and the class properties.  A result map isn't
        necessary if the columns (or aliases) match to the properties
