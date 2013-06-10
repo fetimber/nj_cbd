@@ -1,0 +1,73 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>集团任务管理</title>
+   
+   <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7" />
+   <link rel="stylesheet" type="text/css" href="../css/jquery-ui-timepicker-addon.css"></link>
+   <link rel="stylesheet" type="text/css" href="../css/smoothness/jquery-ui-1.9.0.custom.min.css"></link> 
+   <link rel="stylesheet" type="text/css" href="../css/managetool.css"></link>
+   
+   <script type="text/javascript" src="../js/lib/jquery-1.8.2.min.js"></script>
+   <script type="text/javascript" src="../js/lib/underscore-min.js"></script>
+   <script type="text/javascript" src="../js/lib/backbone-min.js"></script>
+   
+   <script type="text/javascript" src="../js/lib/jquery-ui-1.9.0.custom.min.js"></script>
+   <script type="text/javascript" src="../js/lib/jquery-ui-timepicker-addon.js"></script>
+   
+   
+   <script type="text/javascript" src="../js/managetool.js"></script>
+  
+</head>
+
+<body>
+<div id="svnOptDialog"></div>
+<div id="packageDialog"></div>
+<div class="main">
+<form action="" name="searchform" id="searchform" method="post" target="loadsvn">
+
+  <table class="form_table margin_top">
+   <tr class="form_row">
+    <td class="form_colum">选择工程：&nbsp;&nbsp;
+		<select name="project" id="project" class="project">
+			
+		</select>
+	</td>
+  <td class="form_colum">起始时间：&nbsp;&nbsp;<input  type="text" id="prevDate" value=""  name="prevDate"/></td>
+  <td class="form_colum">截止时间：&nbsp;&nbsp;<input  type="text" id="endDate" value="" name="endDate"/></td>
+  
+  </tr>
+  <tr class="form_row">
+    <td class="form_colum">&nbsp;</td>
+    <td class="form_colum">&nbsp;</td>
+    <td class="form_colum">
+    	<input  type="button" value="检索版本文件" id="showSvnOptButton"/>&nbsp;
+    	<input  type="button" value="增量打包" id="packageButton"/>&nbsp;
+    	<input  type="button" value="全量打包" id="packageAllButton"/>
+    </td>
+  </tr>
+   
+  </table>
+
+  <table class="list_table margin_top" >
+   <thead>
+   	 <tr>
+	   <th width="30"><input type="checkbox" checked id="checkcontrol" name="checkcontrol"></input></th>
+	   <th width="70">版本号</th>
+	   <th width="90">修改人</th>
+	   <th width="200">修改时间</th>
+	   <th width="50">动作</th>
+	   <th width="350">修改内容</th>
+	   <th width="200">备注</th>
+   	 </tr>
+   </thead>
+	<tbody id = 'logtable'>
+	
+	</tbody>
+  </table>
+ </form>
+</div>
+</body>
+
+</html>

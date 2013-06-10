@@ -1,0 +1,51 @@
+ .main{ width:100%; margin:10px auto; font-size:12px;}
+ .margin_top{ margin-top:10px;}
+ .form_table
+{
+	width: 95%;
+	border-collapse: collapse;
+	margin: 0 auto;
+	border:1px solid #ccc;
+}
+.form_table .form_colum
+{
+	padding:5px; padding-left:10px;vertical-align:middle; text-align:left; width: 30%;
+}
+
+ .form_table .form_row
+{
+	background: #fff;
+	border:1px solid #ccc;
+}
+.form_table input[type="text"]
+{
+	width: 200px;
+	height: 18px;
+	border: 1px solid #ccc;
+}
+
+.form_table .project
+{
+	width: 200px;
+}
+
+.list_table
+{
+	width:95%;
+	border-collapse:collapse;
+	margin:10px auto;
+}
+ .list_table td
+{
+	border:1px solid #ebdfe0;
+	text-align:left;
+	font-size:13px;
+	padding-top:3px;
+	padding-bottom:3px; 
+
+}
+.list_table thead th{
+	background:#f3edee;
+    border:1px solid #ebdfe0;
+	height:25px; text-align:center;
+}
